@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Prova Prática</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h1>Acessibilidade Digital.</h1>
+        </nav>
+
+    </header>
+    
+    <!--aqui temos a tentativa de fazer o DarkMode-->
+
+    <button onclick="darkMode()">Modo escuro</button>
+    <button onclick="lightMode()">Modo claro</button>
+
+    <script>
+        let minhaImagem = document.querySelector('img');
+
+        function darkMode() {
+            var element = document.body;
+            var content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "O modo escuro está ativado";
+
+        }
+        function lightMode() {
+            var element = document.body;
+            var content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "O modo escuro está desativado";
+        }
+
+
+
+    </script>
+
+
+    <main>
+
+        <!--Lista não ordenada(usei o site que o Sr. disponibilizou no classroom)-->
+        <h2>Existem diversos tipos de perfis que necessitam de acessibilidade, dentre eles estão:</h2>
+
+        <ul>
+            <li>Pessoa Cega</li>
+            <li>Pessoa com Baixa Visão</li>
+            <li>Pessoa com Daltonismo</li>
+            <li>Pessoa com dislexia</li>
+            <li>Pessoa com Epilepsia</li>
+            <li>Pessoa com deficiencia motora</li>
+            <li>Pessoa com TDAH</li>
+        </ul>
+
+        <br>
+
+        <!--Vídeo do YouTube--> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0oB6m7zhbWE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen> </iframe>
+
+        <br>
+
+        <!--Texto informativo-->
+        <p>Acessibilidade Digital é a eliminação de barreiras na Web. O conceito pressupõe que os sites e portais sejam
+            projetados de modo que todas as pessoas possam perceber, entender, navegar e interagir de maneira efetiva
+            com as
+            páginas.
+
+            As diversas barreiras encontradas nos sítios eletrônicos atingem principalmente as pessoas com deficiência.
+            Ao
+            utilizarem a Web e seus recursos, as pessoas com deficiência ou outras limitações, deparam-se com obstáculos
+            que
+            dificultam e, muitas vezes, impossibilitam o acesso aos conteúdos e páginas. No Brasil, segundo o Censo
+            Demográfico do IBGE de 2010, há aproximadamente 45 milhões de pessoas que apresentam pelo menos uma das
+            deficiências investigadas. Esse número representa 23,9% da população brasileira. Um percentual a ser
+            considerado
+            quando discutimos a importância de implementar a acessibilidade nos sítios governamentais..
+        </p>
+
+        <br><br>
+
+        <!--Lista Ordenada fonte: IBGE-->
+        <h2>Percentual de pessoas com deficiencia(IBGE 2010):</h2>
+
+        <ol>
+            <li>3,4% Visual</li>
+            <li>2,3% Motora</li>
+            <li>1,4% Mental/Intelectual</li>
+            <li>1,1% Auditiva</li>
+
+        </ol>
+
+        <!--Imagem do símbolo de Acessibilidade-->
+        <div class="acss">
+            <img alt="Símbolo de Acessibilidade"
+                src="https://www.ourinhos.sp.gov.br/fotos/d594af9fedaeac1e2ebcf4378bee92fe.jpg">Este símbolo foi adotado em 2015
+            como símbolo da Acessibilidade</img>
+            </div>
+        
+    </main>
+
+
+    <!--Aqui tem o botão de libras que me deu trabalho, e ainda dá-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+   
+
+    <footer>Quase Todos os Direitos De Sam</footer>
+</body>
+
+</html>
